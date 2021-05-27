@@ -1,0 +1,145 @@
+.slider {
+  width: 1440px;
+  height: 1153px;
+  margin: 0 auto 0;
+  padding-top: 160px;
+  &__logo{
+    width: 342px;
+    height: 41px;
+  }
+  &__area-logo{
+    width: 1171px;
+    height: 62px;
+    margin: 0 auto 50px;
+    border-top: 1px solid #B2B2B2;
+  }
+  &__logo-link{
+    margin-top: 20px;
+    width: 342px;
+    height: 41px;
+  }
+  &__section{
+    width: 1440px;
+    height: 751px;
+    display: flex;
+    padding: 0 60px 0 60px;
+    background: rgb(218,229,230);
+    background: linear-gradient(28deg, rgba(218,229,230,1) 32%, rgba(251,251,251,1) 74%);
+  }
+  &__left {
+    width: 422px;
+    height: 601px;
+    position: relative;
+  }
+  &__left-text-link {
+    color: #7F7F7F;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 29px;
+    line-height:32px;
+  }
+  &__left-one {
+    width: 422px;
+    height: 601px;
+    position: absolute;
+    background-color: white;
+    z-index: 3;
+    top: 60px;
+    left: 0;
+    padding-top: 60px;
+  }
+  &__left-two {
+    width: 422px;
+    height: 601px;
+    position: absolute;
+    background-color: white;
+    z-index: 2;
+    top: 60px;
+    left: 0;
+    padding-top: 60px;
+  }
+  &__nav {
+    width: 25px;
+    height: 70px;
+    position: absolute;
+    top: 85px;
+    right: 20px;
+    z-index: 99999;
+  }
+  &__nav-righr {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    color: #22BF95;
+    border: 1px solid #22BF95;
+    border-radius: 100%;
+    margin-bottom: 20px;
+  }
+  &__nav-left {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    color: rgba(34,191,149,0.40);
+    border: 1px solid rgba(34,191,149,0.40);
+    border-radius: 100%;
+  }
+  &__right {
+    width: 1018px;
+    height: 601px;
+  }
+  &__right-title {
+    color: black;
+    margin-top: 190px;
+    margin-left: 130px;
+    margin-bottom: 73px;
+    font-size: 90px;
+  }
+  &__right-text-area {
+    margin-left: 200px;
+    width: 500px;
+    height: 252px;
+    display: flex;
+  }
+  &__right-text-border {
+    border-left: 2px solid #22BF95;
+    height: 181px;
+  }
+  &__right-text {
+    color: black;
+    width: 462px;
+    height: 252px;
+    margin-left: 35px;
+    font-size: 24px;
+    line-height:36px;
+  }
+  &__dots{
+    display: flex;
+    align-items: center;
+  }
+  .hover-dot{
+    width: 105px;
+    height: 1px;
+    background-color: white;
+  }
+  &__left-text-link:hover .hover-dot{
+    background-color: black;
+  }
+}
+.border-arrow{
+  width: 25px;
+height: 25px;
+// border: 1px solid #22BF95;
+// border-radius: 100%;
+margin-left: 4px;
+margin-top: 4px;
+
+}
+.slider__dots:hover .hover-dot {
+  background-color: #22BF95;
+}
+
+@media (max-width: 500px){
+  .slider{
+      display: none;
+  }
+}
