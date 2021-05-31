@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html --no-cache --open",
-    "start": "npm run dev",
+    "start": "parcel ./src/index.html --no-cache --open",
     "build": "parcel build ./src/index.html --public-url ./ --no-cache -d build"
   },
   "keywords": [],

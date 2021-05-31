@@ -1,33 +1,40 @@
 .slider {
-  width: 1440px;
+  width: 100vw;
   height: 1153px;
-  margin: 0 auto 0;
   padding-top: 160px;
+  background: rgb(218,229,230);
+  background: linear-gradient(28deg, rgba(218,229,230,1) 32%, rgba(251,251,251,1) 74%);
+  margin: 0 auto 0;
   &__logo{
-    width: 342px;
+    max-width: 342px;
+    width: 100%;
     height: 41px;
   }
   &__area-logo{
-    width: 1171px;
+    max-width: 1171px;
+    width: 100%;
     height: 62px;
     margin: 0 auto 50px;
     border-top: 1px solid #B2B2B2;
   }
   &__logo-link{
     margin-top: 20px;
-    width: 342px;
+    max-width: 342px;
+    width: 100%;
     height: 41px;
   }
   &__section{
-    width: 1440px;
+    max-width: 1440px;
+    width: 100%;
     height: 751px;
     display: flex;
     padding: 0 60px 0 60px;
-    background: rgb(218,229,230);
-    background: linear-gradient(28deg, rgba(218,229,230,1) 32%, rgba(251,251,251,1) 74%);
+    margin: 0 auto 0;
+   
   }
   &__left {
-    width: 422px;
+    max-width: 422px;
+    width: 100%;
     height: 601px;
     position: relative;
   }
@@ -39,7 +46,8 @@
     line-height:32px;
   }
   &__left-one {
-    width: 422px;
+    max-width: 422px;
+    width: 100%;
     height: 601px;
     position: absolute;
     background-color: white;
@@ -49,7 +57,8 @@
     padding-top: 60px;
   }
   &__left-two {
-    width: 422px;
+    max-width: 422px;
+    width: 100%;
     height: 601px;
     position: absolute;
     background-color: white;
@@ -64,7 +73,7 @@
     position: absolute;
     top: 85px;
     right: 20px;
-    z-index: 99999;
+    z-index: 99;
   }
   &__nav-righr {
     width: 25px;
@@ -84,7 +93,8 @@
     border-radius: 100%;
   }
   &__right {
-    width: 1018px;
+    max-width: 1018px;
+    width: 100%;
     height: 601px;
   }
   &__right-title {
@@ -96,7 +106,8 @@
   }
   &__right-text-area {
     margin-left: 200px;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
     height: 252px;
     display: flex;
   }
@@ -106,7 +117,8 @@
   }
   &__right-text {
     color: black;
-    width: 462px;
+    max-width: 462px;
+    width: 100%;
     height: 252px;
     margin-left: 35px;
     font-size: 24px;
