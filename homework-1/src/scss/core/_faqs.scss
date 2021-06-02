@@ -44,7 +44,8 @@ color: #22BF95;
 &__quetion-letter {
     margin-left: 0;
     font-size: 48px;
-    color: #E5E5E5;  
+    color: #E5E5E5; 
+    font-family: 'Actor', sans-serif; 
 }
 &__quetion-text {
     max-width: 172px;
@@ -67,6 +68,7 @@ color: #22BF95;
     margin-left: 0px;
     font-size: 48px;
     color: #E5E5E5;
+    font-family: 'Actor', sans-serif;
 }
 &__answer-text{
     max-width: 172px;
@@ -131,6 +133,7 @@ color: #22BF95;
         margin-left: 104px;
         font-size: 110px;
         color: #E5E5E5;  
+        font-family: 'Actor', sans-serif;
     }
     &__quetion-text {
         max-width: 670px;
@@ -152,6 +155,7 @@ color: #22BF95;
         margin-left: 104px;
         font-size: 110px;
         color: #E5E5E5;
+        font-family: 'Actor', sans-serif;
     }
     &__answer-text{
         margin-left: 100px;

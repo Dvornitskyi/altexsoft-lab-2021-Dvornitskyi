@@ -19,6 +19,23 @@ button {
   cursor: pointer;
 }
 
+a,
+p,
+h1,
+li{
+  font-weight: 400;
+}
+
+a,
+p,
+li{
+  font-family: 'Aclonica', sans-serif;
+}
+
+h1{
+  font-family: 'Actor', sans-serif;
+}
+
 hr{
   color:#ffffff;
   width: 40px;

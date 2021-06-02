@@ -54,6 +54,7 @@
     color: #22BF95;
     display: flex;
     justify-content: center;
+    font-family: 'Acme', sans-serif;
   }
   &__menu {
     display: block;
@@ -146,6 +147,7 @@
     &__nav-link {
       font-size: 12px;
       color: white;
+      font-family: 'Acme', sans-serif;
     }
     &__btn {
       position: inherit;
