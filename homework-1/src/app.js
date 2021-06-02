@@ -118,6 +118,7 @@ function showFaqsMoreQuestion() {
 }
 showFaqsMoreQuestion();
 //-----------mobile
+const aroundBody = document.body;
 const headerX = document.querySelector('#headerX');
 const headerMenu = document.querySelector('#headerMenu');
 const headerNav= document.querySelector('#headerNav');
@@ -128,17 +129,17 @@ headerX.style.display = 'none';
 function mobileMenu() {
     headerMenu.onclick = () => {
         headerNav.style.display = 'block';
-        headerBtn.style.display = 'block';
+        headerBtn.style.display = 'flex';
         headerX.style.display = 'block';
         headerMenu.style.display = 'none';
+        aroundBody.style.overflow = 'hidden';
     }
     headerX.onclick = () => {
         headerNav.style.display = 'none';
         headerBtn.style.display = 'none';
         headerX.style.display = 'none';
         headerMenu.style.display = 'block';
-        headerBtnOne.style.display = 'none';
-        headerBtnTwo.style.display = 'none';
+        aroundBody.style.overflow = 'visible';
     }
 }
 mobileMenu();
