@@ -1,0 +1,281 @@
+.header{
+  min-width: 375px;
+  height: 100%;
+  position: relative;
+  background: rgb(55,209,213);
+  background: linear-gradient(90deg, rgba(55,209,213,1) 35%, rgba(1,255,0,1) 60%);
+  padding: 0 20px;
+  &__section-text {
+    min-width: 335px;
+    width: 100%;
+    height: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo{
+    width: 92px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  &__logo-img{
+    width: 92px;
+    height: 20px;
+  }
+  &__page-title {
+    margin: 0 auto 20px;
+    min-width: 142px;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    text-align: center;
+    color: $color-up-gradient;
+    letter-spacing: 2px;
+  }
+  &__group-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__group-around-text {
+    display: flex;
+  }
+  &__group-line {
+    width: 1.5px;
+    height: 150px;
+    background-color: $color-up-gradient;
+    margin-right: 29px;
+  }
+  &__group-text {
+    font-size: 12px; 
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: $color-up-gradient;
+    font-family: $font-text;
+  }
+  &__group-button {
+    width: 100%;
+    height: 40px;
+    font-size: 12px; 
+    line-height: 24px;
+    letter-spacing: 2px;
+    background-color: $color-up-gradient;
+    color: $color-button-hr;
+    font-family: $font-sub-title;
+    border-radius: 20px;
+    margin: 20px 0 20px;
+  }
+  &__nav {
+    position: absolute;    
+    top: 62px;
+    left: 0;
+    min-width: 375px;
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    background-color: white;
+    padding-top: 40px;
+    display: none;
+  }
+  &__nav-around {
+    margin: 0 auto;
+    }
+  &__nav-link{
+    font-size: 12px; 
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: $color-button-hr;
+    display: flex;
+    justify-content: center;
+    font-family: $font-nav;
+  }
+  &__menu {
+    display: block;
+    margin-left: 218px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+  }
+  &__X {
+    display: none;
+    margin-left: 218px;
+    font-size: 18px;
+    cursor: pointer;
+    color: white;;
+  }
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 375px;
+    width: 100%;
+    height: 96px;
+    position: fixed;    
+    top: 469px;
+    left: 0;
+    z-index: 1001;
+    display: none;
+  }
+  &__btn-1 {
+    width: 180px;
+    height: 40px;
+    color: $color-button-hr;
+    margin: 0 auto 16px;
+    border: 1.5px solid $color-button-hr;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+  &__btn-2 {
+    width: 90px;
+    height: 40px;
+    color: $color-button-hr;
+    border-color: $color-button-hr;
+    margin: 0 auto;
+    border: 1.5px solid $color-button-hr;
+    border-radius: 20px;
+    box-shadow: none;
+  }
+  &__nav-bottom-border{
+    color: $color-button-hr;
+  }
+}
+
+
+@media (min-width: 768px){
+  .header {
+    max-width: 1440px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    &__group-area {
+      display: flex;
+      flex-direction: row;
+    }
+    &__group-around-text {
+      display: flex;
+      align-items: center;
+      max-width: 930px;
+      width: 100%;
+      margin: 110px auto 100px auto;
+    }
+    &__group-line {
+      width: 1.5px;
+      height: 150px;
+      background-color: $color-up-gradient;
+      margin-right: 29px;
+    }
+    &__group-text {
+      width: 670px;
+      height: 100%;
+      font-size: 20px; 
+      line-height: 26px;
+      letter-spacing: 2px;
+      color: $color-up-gradient;
+      font-family: $font-text;
+    }
+    &__group-button {
+      width: 200px;
+      height: 40px;
+      font-size: 12px; 
+      line-height: 24px;
+      letter-spacing: 2px;
+      background-color: $color-up-gradient;
+      color: $color-button-hr;
+      font-family: $font-sub-title;
+      border-radius: 20px;
+      margin: 20px 0 20px;
+    }
+    &__section-text {
+      margin: 0 auto 0;
+      max-width: 1440px;
+      width: 100%;
+      height: 84px;
+      display: flex;
+      align-items: center;
+    }
+    &__logo {
+      width: 110px;
+      height: 24px;
+      margin-left: 84px;
+      margin-right: 143px;
+    }
+    &__logo-img {
+      width: 110px;
+      height: 24px;
+    }
+    &__nav {
+      position: inherit;
+      display: flex;
+      max-width: 647px;
+      width: 100%;
+      height: 84px;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      margin-right: 48px;
+      line-height: 31px;
+      background-color: transparent;
+    }
+    &__nav-link {
+      font-size: 12px;
+      color: $color-up-gradient;
+      font-family: 'Acme', sans-serif;
+    }
+    &__btn {
+      position: inherit;
+      max-width: 300px;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__btn-1 {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 180px;
+      width: 100%;
+      height: 40px;
+      border: 1.5px solid $color-up-gradient;
+      border-radius: 20px;
+      color: $color-up-gradient;
+    }
+    &__btn-2 {
+      border: 1.5px solid $color-up-gradient;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 90px;
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+      color: $color-up-gradient;
+    }
+    &__page-title {
+      margin: 102px auto 0;
+      max-width: 1110px;
+      line-height: 130px;
+      text-transform: uppercase;
+      width: 100%;
+      height: 100%;
+      font-size: 110px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-up-gradient;
+      letter-spacing: 2px;
+    }
+    &__nav-link:hover + .header__nav-bottom-border
+   {
+    visibility: visible
+  }
+    &__X{
+      display: none;
+    }
+    &__icon-mobile {
+      display: none;
+    }
+  }
+}
+

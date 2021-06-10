@@ -1,0 +1,85 @@
+.slick-list {
+    overflow: hidden;
+}
+.slick-track{
+    display: flex;
+}
+.plans__slider .slick-slide{
+    position: relative;
+}
+.plans__slider .slick-track{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.problems__sliders .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    z-index: 99;
+}
+.problems__sliders .slick-dots li{
+    list-style: none;
+    margin: 0 10px;
+}
+.problems__sliders .slick-dots li button{
+    font-size: 0px;
+    width: 3px;
+    height: 3px;
+    background-color: $color-button-hr;
+    border-radius: 50%;
+}
+.problems__sliders .slick-dots li.slick-active button{
+    width: 10px;
+    height: 10px;
+    border: 1px solid $color-button-hr;
+    border-radius: 50%;
+    background-color: transparent;
+    box-shadow: none;
+}
+.problems__sliders .slick-dots li.slick-active button::after{
+    content: ".";
+    font-size: 30px;
+    color: $color-button-hr;
+    z-index: 100;
+    border-radius: 50%;
+    position: absolute;
+    top: -13px;
+    margin-left: -3.5px;
+}
+@media (min-width: 768px){
+    .problems__sliders .slick-dots{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 92px;
+        right: -1100px;
+        z-index: 99;
+        height: 225px;
+    }
+    .problems__sliders .slick-dots li.slick-active button{
+    }
+    .problems__sliders .slick-dots li.slick-active button::after{
+        font-size: 0px;
+    }
+}
+.three__sliders .slick-dots{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-plans-no-active;
+}
+.three__sliders .slick-dots li{
+    list-style: none;
+    margin: 0 10px;
+    height: 100px;
+}
+.three__sliders .slick-dots li button{
+    font-size: 0px;
+}
+.three__sliders .slick-dots li.slick-active{
+  border-bottom: 2px solid $color-button-hr;
+}

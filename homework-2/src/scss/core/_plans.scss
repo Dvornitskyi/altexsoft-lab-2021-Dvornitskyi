@@ -1,0 +1,189 @@
+.plans {
+    min-width: 375px;
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+    &__section {
+        min-width: 235px;
+        width: 100%;
+        height: 350px;
+    }
+    &__page-title {
+        font-size: 32px;
+        font-family: $font-text;
+        letter-spacing: 2px;
+        margin: 0 0 20px;
+        text-align: center;
+    }
+    &__slider { 
+        height: 350px; 
+    }
+    &__slider-elements {
+        width: 235px;
+        height: 100%; 
+        margin: 0 20px 0 0;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    &__slider-elements:hover{
+        height: 270px; 
+    }
+    .plans__slider-elements:hover .plans__sub-title{
+        padding-top: 15px;
+        margin: 0 0 15px 0;
+    }
+    .plans__slider-elements:hover .plans__active{
+        line-height: 29px;
+    }
+    .plans__slider-elements:hover .plans__no-active{
+        line-height: 29px;
+    }
+    &__sub-title {
+        padding-top: 10px;
+        font-size: 24px;
+        font-family: $font-text;
+        letter-spacing: 2px;
+        width: 235px; 
+        text-align: center; 
+        margin: 0 0 10px 0;
+    }
+    &__area-text { 
+        width: 195px;
+        margin: 0 auto;    
+    }
+    &__active {
+        width: 195px;
+        font-size: 12px;
+        font-family: $font-text;
+        letter-spacing: 2px;
+        color: $color-text;
+        line-height: 24px;
+        border-top: 1.5px solid $color-plans-border-top;
+    }
+    &__active-image {
+        font-size: 12px;
+        color: $color-button-hr;
+        margin: 0 10px 0 0;
+    }
+    &__no-active {
+        display: flex;
+        align-items: center;
+        width: 195px;
+        font-size: 12px;
+        font-family: $font-text;
+        letter-spacing: 2px;
+        color: $color-plans-no-active;
+        line-height: 24px;
+        border-top: 1.5px solid $color-plans-border-top;
+    }
+    &__no-active-image {
+        width: 12px;
+        height: 12px;
+        margin: 0 10px 0 0;
+    }
+    &__btn {
+        width: 235px;
+        height: 40px; 
+        border-radius: 20px;
+        border: 1.5px solid $color-button-hr;
+        color: $color-button-hr;
+        margin: 10px 0 0 0;
+    }
+}
+.pro-bg {
+    width: 235px;
+    background: rgb(55,209,213);
+    background: linear-gradient(90deg, rgba(55,209,213,1) 35%, rgba(1,255,0,1) 60%);
+}
+.pro {
+    color: $color-up-gradient;
+}
+.pro-btn{
+    background-color: $color-up-gradient;
+}
+@media (min-width: 768px){
+    .plans {
+        min-width: 0;
+        max-width: 1440px;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        margin-bottom: 50px;
+        margin: 0 auto;
+        &__section {
+            max-width: 1440px;
+            width: 100%;
+            height: 655px;
+        }
+        &__page-title {
+            font-size: 42px;
+            line-height: 54px;
+            letter-spacing: 2px;
+            margin: 70px 0;
+        }
+        &__slider { 
+            width: 100%;
+            height: 571px; 
+        }
+        &__slider-elements {
+            height: 571px; 
+            width: 331px;
+            padding: 0 50px;
+        }
+        &__slider-elements:hover{
+            height: 571px; 
+        }
+        .plans__slider-elements:hover .plans__sub-title{
+            padding-top: 15px;
+            margin: 47px 0;
+        }
+        .plans__slider-elements:hover .plans__active{
+            line-height: 29px;
+        }
+        .plans__slider-elements:hover .plans__no-active{
+            line-height: 29px;
+        }
+        &__sub-title {
+            padding-top: 10px;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            width: 235px; 
+            margin: 42px 0;
+        }
+        &__area-text { 
+            width: 231px;
+            margin: 0;    
+        }
+        &__active {
+            width: 231px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            line-height: 24px;
+        }
+        &__active-image {
+            font-size: 35px;
+            margin: 10px 10px 10px 0;
+        }
+        &__no-active {
+            display: flex;
+            width: 231px;
+            font-size: 13px;
+            letter-spacing: 2px;
+            line-height: 24px;
+        }
+        &__no-active-image {
+            width: 35px;
+            height: 35px;
+            margin: 10px 10px 10px 0;
+        }
+        &__btn {
+            width: 231px;
+            height: 40px; 
+            margin: 51px auto 37px auto;
+        }
+    }
+    .pro-bg {
+        width: 331px;
+    }
+}

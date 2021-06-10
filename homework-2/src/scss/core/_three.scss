@@ -1,0 +1,94 @@
+.three {
+    min-width: 375px;
+    height: 100%;
+    padding: 0 20px;
+    &__section {
+        min-width: 335px;
+        width: 100%;
+        height: 100%;
+    }
+    &__sliders {
+        min-width: 335px;
+        width: 100%;
+        height: 100%;
+    }
+    &__slide {
+        min-width: 335px;
+        width: 100%;
+        height: 100%;
+    }
+    &__image {
+        margin: 10 0 0 0;
+        padding: 0 20px;
+        width: 150px;
+        object-fit: cover
+    }
+    &__area-text {
+    }
+    &__text {
+        font-size: 12px;
+        font-family: $font-text;
+        margin: 10px 0 20px;
+        color: $color-footer-text;
+    }
+    &__bottom-text {
+        text-align: right;
+        font-size: 12px;
+        font-family: $font-nav;
+        color: $color-footer-text;
+    }  
+}
+@media (min-width: 768px){
+    .three {
+        max-width: 1440px;
+        width: 100%;
+        height: 100%;
+        padding: 100px 20px 0;
+        margin: 0 auto;
+        &__section {
+            min-width: 335px;
+            width: 100%;
+            height: 100%;
+        }
+        &__sliders {
+            max-width: 1171px;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        &__slide {
+            max-width: 1440px;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 120px;
+        }
+        &__slide-flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        &__image {
+            margin: 10 0 0 0;
+            padding: 0 20px;
+            width: 340px;
+            height: 100%;
+            object-fit: cover
+        }
+        &__area-text {
+            max-width: 570px;
+            width: 100%;
+            float: left;
+        }
+        &__text {
+            font-size: 24px;
+            line-height: 36px;
+            margin: 10px 0 20px;
+        }
+        &__bottom-text {
+            text-align: right;
+            font-size: 24px;
+            line-height: 36px;
+            color: $color-footer-text;
+        }  
+    }
+}
