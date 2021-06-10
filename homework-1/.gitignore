@@ -1,4 +1,4 @@
 .cahce
+dist
 node_modules
 pnpm-lock.yaml 
-dist
