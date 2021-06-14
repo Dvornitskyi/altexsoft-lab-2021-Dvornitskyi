@@ -1,62 +1,244 @@
+.header-mobile-menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 62px;
+  z-index: 9;
+  &-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+    cursor: pointer;
+    transition: .4s;
+  }
+  &-icon {
+    display: block;
+    position: relative;
+    background: white;
+    width: 90%;
+    height: 4px;
+    transition: .4s;
+  }
+  &-icon::after, .header-mobile-menu-icon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 4px;
+    transition: .4s;
+  }
+  &-icon::after {
+    top: 8px;
+  }
+  &-icon::before {
+    top: -8px;
+  }
+  &-container {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 62px;
+    left: 0;
+    right: 0;
+    height: 0;
+    opacity: 1;
+    transition: .5s;
+    overflow: hidden;
+    background-color: white;
+  }
+  &-list {
+    transition: .5s;
+    list-style: none;
+    padding-left: 0;
+    margin-top: -50px;
+    margin-bottom: 205px;
+  }
+  &-item {
+    font-size: 26px;
+    padding-bottom: 15px;
+  }
+  &-link {
+    text-decoration: none;
+    color: $color-button-hr;
+  }
+  &-checkbox {
+    display: none;
+  }
+  &-checkbox:checked ~ .header-mobile-menu-nav {
+    opacity: 1;
+  }
+  &-checkbox:checked ~ .header-mobile-menu-container {
+    position: fixed;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &-checkbox:checked ~ .header-mobile-menu-btn .header-mobile-menu-icon {
+    background: transparent;
+  }
+  &-checkbox:checked ~ .header-mobile-menu-btn .header-mobile-menu-icon::before, .header-mobile-menu-checkbox:checked ~ .header-mobile-menu-btn .header-mobile-menu-icon::after {
+    top: 0;
+  }
+  &-checkbox:checked ~ .header-mobile-menu-btn .header-mobile-menu-icon::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  &-checkbox:checked ~ .header-mobile-menu-btn .header-mobile-menu-icon::before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+}
+@media (min-width: $screen-desktop){
+  .header-mobile-menu{
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    &-checkbox{
+      display: none;
+    }
+    &-btn{
+      display: none;
+    }
+    &-icon{
+      display: none;
+    }
+    &-container{
+      position: absolute;
+      top: -10px;
+      left: 38px;
+      z-index: 10;
+      height: 82px;
+      background-color: transparent;
+    }
+    &-list{
+      position: inherit;
+      top: 80px;
+      left: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 450px;
+      width: 100%;
+      z-index: 10;
+    }
+  }
+}
+@media (min-width: $screen-desktop-large){
+  .header-mobile-menu{
+    &-list{
+      top: 80px;
+      left: 0px;
+      max-width: 680px;
+      width: 100%;
+    }
+    &-container{
+      left: 58px;
+    }
+  }
+}
+@media (min-width: 1400px){
+  .header-mobile-menu{
+    &-list{
+      top: 80px;
+      left: 0px;
+      max-width: 600px;
+      width: 100%;
+    }
+    &-container{
+      left: 238px;
+    }
+  }
+}
 .header{
-  min-width: 375px;
-  height: 100%;
-  position: relative;
   background: rgb(55,209,213);
   background: linear-gradient(90deg, rgba(55,209,213,1) 35%, rgba(1,255,0,1) 60%);
-  padding: 0 20px;
-  &__section-text {
-    min-width: 335px;
+  &-section-text {
+    position: relative;
+    min-width: 375px;
     width: 100%;
+    padding: 0 20px;
     height: 62px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  &__logo{
+  &-logo{
     width: 92px;
     height: 20px;
     margin-right: 10px;
   }
-  &__logo-img{
+  &-logo-img{
     width: 92px;
     height: 20px;
   }
-  &__page-title {
+  &-icon-mobile{
+    width: 50px;
+    height: 50px;
+  }
+  &-page-title {
     margin: 0 auto 20px;
     min-width: 142px;
     width: 100%;
     height: 100%;
-    font-size: 40px;
+    font-size: $font-size-up-midlle-text;
     text-align: center;
     color: $color-up-gradient;
     letter-spacing: 2px;
   }
-  &__group-area {
+  &-group-area {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 375px;
+    width: 100%;
+    padding: 0 20px;
+    height: 100%;
   }
-  &__group-around-text {
+  &-group-around-text {
     display: flex;
   }
-  &__group-line {
+  &-group-line {
     width: 1.5px;
     height: 150px;
     background-color: $color-up-gradient;
     margin-right: 29px;
   }
-  &__group-text {
-    font-size: 12px; 
+  &-group-text {
+    font-size: $font-size-button-and-standart-text; 
     line-height: 24px;
     letter-spacing: 2px;
     color: $color-up-gradient;
     font-family: $font-text;
+    position: relative;
+    margin-left: 29px;
   }
-  &__group-button {
+  &-group-text::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -29px;
+    width: 2px;
+    height: 100px;
+    background-color: white;
+    z-index: 10;
+    display: block;
+  }
+  &-group-button {
     width: 100%;
     height: 40px;
-    font-size: 12px; 
+    font-size: $font-size-button-and-standart-text; 
     line-height: 24px;
     letter-spacing: 2px;
     background-color: $color-up-gradient;
@@ -65,7 +247,7 @@
     border-radius: 20px;
     margin: 20px 0 20px;
   }
-  &__nav {
+  &-nav {
     position: absolute;    
     top: 62px;
     left: 0;
@@ -77,11 +259,11 @@
     padding-top: 40px;
     display: none;
   }
-  &__nav-around {
+  &-nav-around {
     margin: 0 auto;
     }
-  &__nav-link{
-    font-size: 12px; 
+  &-nav-link{
+    font-size: $font-size-button-and-standart-text; 
     line-height: 24px;
     letter-spacing: 2px;
     color: $color-button-hr;
@@ -89,34 +271,12 @@
     justify-content: center;
     font-family: $font-nav;
   }
-  &__menu {
-    display: block;
-    margin-left: 218px;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-  }
-  &__X {
-    display: none;
-    margin-left: 218px;
-    font-size: 18px;
-    cursor: pointer;
-    color: white;;
-  }
-  &__btn {
+  &-btn {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 375px;
-    width: 100%;
-    height: 96px;
-    position: fixed;    
-    top: 469px;
-    left: 0;
-    z-index: 1001;
-    display: none;
   }
-  &__btn-1 {
+  &-btn-one {
     width: 180px;
     height: 40px;
     color: $color-button-hr;
@@ -125,7 +285,7 @@
     border-radius: 20px;
     box-shadow: none;
   }
-  &__btn-2 {
+  &-btn-two {
     width: 90px;
     height: 40px;
     color: $color-button-hr;
@@ -135,36 +295,37 @@
     border-radius: 20px;
     box-shadow: none;
   }
-  &__nav-bottom-border{
+  &-nav-bottom-border{
     color: $color-button-hr;
   }
 }
 
 
-@media (min-width: 768px){
+@media (min-width: $screen-desktop){
   .header {
-    max-width: 1440px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    &__group-area {
+    &-section-text {
+      margin: 0 auto 0;
+      max-width: 1440px;
+      width: 100%;
+      height: 84px;
+      display: flex;
+      align-items: center;
+    }
+    &-group-area {
       display: flex;
       flex-direction: row;
+      margin: 0 auto 0;
+      max-width: 1440px;
+      width: 100%;
     }
-    &__group-around-text {
+    &-group-around-text {
       display: flex;
       align-items: center;
       max-width: 930px;
       width: 100%;
       margin: 110px auto 100px auto;
     }
-    &__group-line {
-      width: 1.5px;
-      height: 150px;
-      background-color: $color-up-gradient;
-      margin-right: 29px;
-    }
-    &__group-text {
+    &-group-text {
       width: 670px;
       height: 100%;
       font-size: 20px; 
@@ -173,10 +334,10 @@
       color: $color-up-gradient;
       font-family: $font-text;
     }
-    &__group-button {
+    &-group-button {
       width: 200px;
       height: 40px;
-      font-size: 12px; 
+      font-size: $font-size-button-and-standart-text; 
       line-height: 24px;
       letter-spacing: 2px;
       background-color: $color-up-gradient;
@@ -184,44 +345,43 @@
       font-family: $font-sub-title;
       border-radius: 20px;
       margin: 20px 0 20px;
+      box-shadow: 0px 6px 12px rgba(127, 127, 127, 0.3);
     }
-    &__section-text {
-      margin: 0 auto 0;
-      max-width: 1440px;
-      width: 100%;
-      height: 84px;
-      display: flex;
-      align-items: center;
-    }
-    &__logo {
+    &-logo {
       width: 110px;
       height: 24px;
-      margin-left: 84px;
-      margin-right: 143px;
+      margin-left: 64px;
     }
-    &__logo-img {
+    &-logo-img {
       width: 110px;
       height: 24px;
     }
-    &__nav {
-      position: inherit;
+    &-mobile-menu-item{
       display: flex;
-      max-width: 647px;
-      width: 100%;
-      height: 84px;
-      justify-content: space-between;
-      margin-bottom: 20px;
-      margin-right: 48px;
-      line-height: 31px;
-      background-color: transparent;
+      flex-direction: column;
     }
-    &__nav-link {
-      font-size: 12px;
+    &-nav-link {
+      font-size: $font-size-button-and-standart-text;
       color: $color-up-gradient;
       font-family: 'Acme', sans-serif;
+      position: relative;
     }
-    &__btn {
+    &-nav-link:hover::after{
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 1.5px;
+      background-color: white;
+      right: 0;
+      margin: 0 auto;
+      display: block;
+    }
+    &-btn {
       position: inherit;
+      top: 20px;
+      right: 20px;
       max-width: 300px;
       width: 100%;
       height: 40px;
@@ -229,7 +389,7 @@
       flex-direction: row;
       justify-content: space-between;
     }
-    &__btn-1 {
+    &-btn-one {
       margin: 0;
       display: flex;
       align-items: center;
@@ -241,7 +401,7 @@
       border-radius: 20px;
       color: $color-up-gradient;
     }
-    &__btn-2 {
+    &-btn-two {
       border: 1.5px solid $color-up-gradient;
       display: flex;
       align-items: center;
@@ -252,7 +412,7 @@
       border-radius: 20px;
       color: $color-up-gradient;
     }
-    &__page-title {
+    &-page-title {
       margin: 102px auto 0;
       max-width: 1110px;
       line-height: 130px;
@@ -266,16 +426,5 @@
       color: $color-up-gradient;
       letter-spacing: 2px;
     }
-    &__nav-link:hover + .header__nav-bottom-border
-   {
-    visibility: visible
-  }
-    &__X{
-      display: none;
-    }
-    &__icon-mobile {
-      display: none;
-    }
   }
 }
-

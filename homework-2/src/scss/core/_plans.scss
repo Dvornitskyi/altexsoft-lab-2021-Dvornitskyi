@@ -3,85 +3,85 @@
     width: 100%;
     height: 400px;
     padding: 20px;
-    &__section {
+    &-section {
         min-width: 235px;
         width: 100%;
         height: 350px;
     }
-    &__page-title {
+    &-page-title {
         font-size: 32px;
         font-family: $font-text;
         letter-spacing: 2px;
         margin: 0 0 20px;
         text-align: center;
     }
-    &__slider { 
+    &-slider { 
         height: 350px; 
     }
-    &__slider-elements {
+    &-slider-elements {
         width: 235px;
         height: 100%; 
         margin: 0 20px 0 0;
         border-radius: 5px;
         cursor: pointer;
     }
-    &__slider-elements:hover{
+    &-slider-elements:hover{
         height: 270px; 
     }
-    .plans__slider-elements:hover .plans__sub-title{
+    .plans-slider-elements:hover .plans-sub-title{
         padding-top: 15px;
         margin: 0 0 15px 0;
     }
-    .plans__slider-elements:hover .plans__active{
+    .plans-slider-elements:hover .plans-active{
         line-height: 29px;
     }
-    .plans__slider-elements:hover .plans__no-active{
+    .plans-slider-elements:hover .plans-no-active{
         line-height: 29px;
     }
-    &__sub-title {
+    &-sub-title {
         padding-top: 10px;
-        font-size: 24px;
+        font-size: $font-size-small-midlle-text;
         font-family: $font-text;
         letter-spacing: 2px;
         width: 235px; 
         text-align: center; 
         margin: 0 0 10px 0;
     }
-    &__area-text { 
+    &-area-text { 
         width: 195px;
         margin: 0 auto;    
     }
-    &__active {
+    &-active {
         width: 195px;
-        font-size: 12px;
+        font-size: $font-size-button-and-standart-text;
         font-family: $font-text;
         letter-spacing: 2px;
         color: $color-text;
         line-height: 24px;
         border-top: 1.5px solid $color-plans-border-top;
     }
-    &__active-image {
-        font-size: 12px;
+    &-active-image {
+        font-size: $font-size-button-and-standart-text;
         color: $color-button-hr;
         margin: 0 10px 0 0;
     }
-    &__no-active {
+    &-no-active {
         display: flex;
         align-items: center;
         width: 195px;
-        font-size: 12px;
+        font-size: $font-size-button-and-standart-text;
         font-family: $font-text;
         letter-spacing: 2px;
         color: $color-plans-no-active;
         line-height: 24px;
         border-top: 1.5px solid $color-plans-border-top;
     }
-    &__no-active-image {
+    &-no-active-image {
         width: 12px;
         height: 12px;
         margin: 0 10px 0 0;
     }
-    &__btn {
+    &-btn {
         width: 235px;
         height: 40px; 
         border-radius: 20px;
@@ -101,83 +101,83 @@
 .pro-btn{
     background-color: $color-up-gradient;
 }
-@media (min-width: 768px){
+@media (min-width: $screen-desktop){
     .plans {
         min-width: 0;
         max-width: 1440px;
         width: 100%;
-        height: 100%;
+        height: 750px;
         padding: 0 20px;
         margin-bottom: 50px;
         margin: 0 auto;
-        &__section {
+        &-section {
             max-width: 1440px;
             width: 100%;
             height: 655px;
         }
-        &__page-title {
-            font-size: 42px;
+        &-page-title {
+            font-size: $font-size-up-midlle-text;
             line-height: 54px;
             letter-spacing: 2px;
             margin: 70px 0;
         }
-        &__slider { 
+        &-slider { 
             width: 100%;
             height: 571px; 
         }
-        &__slider-elements {
+        &-slider-elements {
             height: 571px; 
             width: 331px;
             padding: 0 50px;
         }
-        &__slider-elements:hover{
+        &-slider-elements:hover{
             height: 571px; 
         }
-        .plans__slider-elements:hover .plans__sub-title{
+        .plans-slider-elements:hover .plans-sub-title{
             padding-top: 15px;
             margin: 47px 0;
         }
-        .plans__slider-elements:hover .plans__active{
+        .plans-slider-elements:hover .plans-active{
             line-height: 29px;
         }
-        .plans__slider-elements:hover .plans__no-active{
+        .plans-slider-elements:hover .plans-no-active{
             line-height: 29px;
         }
-        &__sub-title {
+        &-sub-title {
             padding-top: 10px;
-            font-size: 18px;
+            font-size: $font-size-up-standart-text;
             line-height: 24px;
             letter-spacing: 2px;
             width: 235px; 
             margin: 42px 0;
         }
-        &__area-text { 
+        &-area-text { 
             width: 231px;
             margin: 0;    
         }
-        &__active {
+        &-active {
             width: 231px;
-            font-size: 13px;
+            font-size: $font-size-button-and-standart-text;
             letter-spacing: 2px;
             line-height: 24px;
         }
-        &__active-image {
+        &-active-image {
             font-size: 35px;
             margin: 10px 10px 10px 0;
         }
-        &__no-active {
+        &-no-active {
             display: flex;
             width: 231px;
-            font-size: 13px;
+            font-size: $font-size-button-and-standart-text;
             letter-spacing: 2px;
             line-height: 24px;
         }
-        &__no-active-image {
+        &-no-active-image {
             width: 35px;
             height: 35px;
             margin: 10px 10px 10px 0;
         }
-        &__btn {
+        &-btn {
             width: 231px;
             height: 40px; 
             margin: 51px auto 37px auto;

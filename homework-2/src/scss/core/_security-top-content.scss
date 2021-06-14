@@ -1,0 +1,132 @@
+.security-top-content {
+    min-width: 375px;
+    height: 100%;
+    padding: 0 20px;
+    &-section {
+        display: flex;
+        flex-direction: column;
+    }
+    &-image{
+        min-width: 335px;
+        width: 100%;
+        height: 100%;
+    }
+    &-area {
+        min-width: 335px;
+        width: 100%;
+        height: 100%;
+    }
+    &-sub-title {
+        min-width: 335px;
+        width: 100%;
+        height: 100%;
+        font-size: $font-size-midlle-text;
+        font-family: $font-text;
+        margin-top: 20px;
+    }
+    &-text {
+        min-width: 335px;
+        width: 100%;
+        height: 100%;
+        font-size: $font-size-button-and-standart-text;
+        font-family: $font-text;
+        line-height: 24px;
+        letter-spacing: 2px;
+        margin: 20px 0 20px;
+    }
+    &-area-btn {
+        display: flex;
+        flex-direction: column;
+        min-width: 335px;
+        width: 100%;
+        height: 100%;
+    }
+    &-btn-one {
+        min-width: 335px;
+        width: 100%;
+        height: 40px;
+        font-size: $font-size-button-and-standart-text;
+        font-family: $font-nav;
+        border-radius: 20px;
+        color: $color-button-hr;
+        border: 1.5px solid $color-button-hr;
+
+    }
+    &-btn-two {
+        min-width: 335px;
+        width: 100%;
+        height: 40px;
+        font-size: $font-size-button-and-standart-text;
+        font-family: $font-nav;
+        border-radius: 20px;
+        background-color: $color-button-hr;
+        color: $color-up-gradient;
+        border: 1.5px solid $color-button-hr;
+        margin: 20px 0 20px;
+    }
+}
+@media (min-width: $screen-desktop){
+    .security-top-content {
+        max-width: 1440px;
+        height: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+        &-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1170px;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        &-image{
+            max-width: 600px;
+            width: 100%;
+            height: 100%;
+        }
+        &-area {
+            max-width: 470px;
+            width: 100%;
+            height: 100%;
+        }
+        &-sub-title {
+            max-width: 470px;
+            width: 100%;
+            height: 100%;
+            font-size: $font-size-midlle-text;
+            margin-top: 20px;
+        }
+        &-text {
+            max-width: 470px;
+            width: 100%;
+            height: 100%;
+            font-size: $font-size-button-and-standart-text;
+            line-height: 24px;
+            letter-spacing: 2px;
+            margin: 43px 0 100px;
+        }
+        &-area-btn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 470px;
+            width: 100%;
+            height: 100%;
+        }
+        &-btn-one {
+            min-width: 0;
+            max-width: 200px;
+            height: 40px;
+            font-size: $font-size-button-and-standart-text;
+        }
+        &-btn-two {
+            min-width: 0;
+            max-width: 200px; 
+            height: 40px;
+            font-size: $font-size-button-and-standart-text;
+            margin: 0;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-//COLORS
+// COLORS
 $color-up-gradient: #ffffff;
 $color-button-hr: #22BF95;
 $color-text: black;
@@ -7,7 +7,20 @@ $color-footer-border: #B2B2B2;
 $color-plans-no-active: #E5E5E5;
 $color-plans-border-top: #F2F2F2;
 
-//FONTS
+// Screens
+$screen-iphone-6: 375px;
+$screen-tablet: 768px;
+$screen-desktop: 1024px;
+$screen-desktop-large: 1280px;
+// FONTS
 $font-nav: 'Acme', sans-serif;
 $font-sub-title: 'Actor', sans-serif;
 $font-text: 'Aclonica', sans-serif;
+
+// Font-size
+$font-size-small-standart-text: 8px;
+$font-size-button-and-standart-text: 12px;
+$font-size-up-standart-text: 16px;
+$font-size-small-midlle-text: 24px;
+$font-size-midlle-text: 32px;
+$font-size-up-midlle-text: 42px;
