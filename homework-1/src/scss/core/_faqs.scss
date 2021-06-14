@@ -1,39 +1,40 @@
  .faqs {
     height: 100%;
-    width: 375px;
+    min-width: 375px;
     margin: 0 auto;
-  &__area-logo{
-    width: 335px;
+    padding: 0 20px;
+&-area-logo{
+    min-width: 335px;
     height: 30px;
     margin: 20px auto 50px;
-    border-top: 1px solid #B2B2B2;
+    border-top: 1px solid $color-footer-border;
   }
-  &__logo{
+&-logo{
     width: 110px;
     height: 18px;
   }
-&__area {
-    max-width: 335px;
+&-area {
+    min-width: 335px;
     width: 100%;
     margin: 0 auto;
 }
-&__quetions {
-    max-width: 335px;
+&-quetions {
+    min-width: 335px;
     width: 100%;
     height: 100%;
 }
-&__down {
+&-down {
     cursor: pointer;
 }
  .faqs-color-icon{
-color: #22BF95;
+color: $color-button-hr;
  }
-&__up {
+&-up {
     display: none;
     cursor: pointer;
 }
-&__quetion {
-    max-width: 335px;
+&-quetion {
+    min-width: 335px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -41,22 +42,22 @@ color: #22BF95;
     padding-top: 40px;
     padding-bottom: 40px;
 }
-&__quetion-letter {
+&-quetion-letter {
     margin-left: 0;
     font-size: 48px;
-    color: #E5E5E5; 
-    font-family: 'Actor', sans-serif; 
+    color: $color-plans-no-active; 
+    font-family: $font-sub-title; 
 }
-&__quetion-text {
-    max-width: 172px;
+&-quetion-text {
+    min-width: 172px;
     width: 100%;
     margin-right: 16px;
     margin-left: 34px;
-    font-size: 24px;
+    font-size: $font-size-small-midlle-text;
 }
 
-&__answer{
-    max-width: 335px;
+&-answer{
+    min-width: 335px;
     width: 100%;
     height: 100%;
     display: flex;
@@ -64,86 +65,88 @@ color: #22BF95;
     margin: 0 auto;
     display: none;
 }
-&__answer-letter{
+&-answer-letter{
     margin-left: 0px;
     font-size: 48px;
-    color: #E5E5E5;
-    font-family: 'Actor', sans-serif;
+    color: $color-plans-no-active;
+    font-family: $font-sub-title;
 }
-&__answer-text{
-    max-width: 172px;
+&-answer-text{
+    min-width: 172px;
     width: 100%;
     margin-right: 16px;
     margin-left: 34px;
-    font-size: 24px;
+    font-size: $font-size-small-midlle-text;
 }
-&__more-question{
+&-more-question{
     font-size: 12px;
-    color: #22BF95;
+    color: $color-button-hr;
     margin-top: 20px;
     text-align: center;
     cursor: pointer;
     margin-bottom: 24px;
 }
 }
-@media (min-width: 500px){
+@media (min-width: $screen-desktop-large){
     .faqs {
         height: 100%;
-        width: 1440px;
+        max-width: 1440px;
+        width: 100%;
         margin: 0 auto;
-      &__area-logo{
+        padding-top: 160px;
+      &-area-logo{
         width: 1171px;
         height: 52px;
         margin: 20px auto 50px;
-        border-top: 1px solid #B2B2B2;
+        border-top: 1px solid $color-footer-border;
       }
-      &__logo{
+      &-logo{
         width: 272px;
         height: 32px;
       }
-    &__area {
+    &-area {
         max-width: 1440px;
         width: 100%;
     }
-    &__quetions {
+    &-quetions {
         max-width: 1440px;
         width: 100%;
         height: 100%;
         padding-top: 0px;
         padding-bottom: 0px;
     }
-    &__down {
+    &-down {
         cursor: pointer;
     }
      .faqs-color-icon{
-    color: #22BF95;
+    color: $color-button-hr;
      }
-    &__up {
+    &-up {
         display: none;
         cursor: pointer;
     }
-    &__quetion {
+    &-quetion {
         max-width: 1440px;
         width: 100%;
         height: 100%;
         display: flex;
         align-items: center;
     }
-    &__quetion-letter {
+    &-quetion-letter {
         margin-left: 104px;
         font-size: 110px;
-        color: #E5E5E5;  
+        color: $color-plans-no-active;  
         font-family: 'Actor', sans-serif;
     }
-    &__quetion-text {
+    &-quetion-text {
         max-width: 670px;
         width: 100%;
         margin-right: 200px;
         margin-left: 100px;
-        font-size: 24px;
+        font-size: $font-size-small-midlle-text;
     }
     
-    &__answer{
+    &-answer{
         max-width: 1440px;
         width: 100%;
         height: 100%;
@@ -151,19 +154,19 @@ color: #22BF95;
         align-items: center;
         display: none;
     }
-    &__answer-letter{
+    &-answer-letter{
         margin-left: 104px;
         font-size: 110px;
-        color: #E5E5E5;
+        color: $color-plans-no-active;
         font-family: 'Actor', sans-serif;
     }
-    &__answer-text{
+    &-answer-text{
         margin-left: 100px;
-        font-size: 24px;
+        font-size: $font-size-small-midlle-text;
     }
-    &__more-question{
-        font-size: 12px;
-        color: #22BF95;
+    &-more-question{
+        font-size: $font-size-button-and-standart-text;
+        color: $color-button-hr;
         margin-top: 50px;
         text-align: center;
         cursor: pointer;

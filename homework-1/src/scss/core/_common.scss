@@ -1,6 +1,4 @@
-*,
-*:after,
-*:before {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -29,20 +27,11 @@ li{
 a,
 p,
 li{
-  font-family: 'Aclonica', sans-serif;
+  font-family: $font-standart-text;
 }
 
 h1{
-  font-family: 'Actor', sans-serif;
-}
-
-hr{
-  color:#ffffff;
-  width: 40px;
-  size: 1.5px;
-  margin: 0 auto;
-  border-top: none;
-  visibility: hidden;
+  font-family: $font-sub-title;
 }
 
 input:active,

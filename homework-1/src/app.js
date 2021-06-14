@@ -1,8 +1,8 @@
 //////---------tips
-const tipsPlus = document.querySelectorAll('#tipsPlus');
-const tipsMinus = document.querySelectorAll('#tipsMinus');
-const tipsFirst = document.querySelectorAll('#tipsFirst');
-const tipsSecond = document.querySelectorAll('#tipsSecond');
+const tipsPlus = document.querySelectorAll('.tips-area-icon-plus');
+const tipsMinus = document.querySelectorAll('.tips-area-icon-minus');
+const tipsFirst = document.querySelectorAll('.tips-first');
+const tipsSecond = document.querySelectorAll('.tips-second');
 function tipsAkardionClose() {
     for(let i = 0; i < tipsFirst.length; i++){
         tipsFirst[i].style.display = 'flex';
@@ -25,11 +25,11 @@ function tipsAkardion() {
 }
 tipsAkardion();
 //----------slider left----------
-const dots = document.querySelectorAll('#dots');
-const navRight = document.querySelector('#navRight');
-const navLeft = document.querySelector('#navLeft');
+const dots = document.querySelectorAll('.slider-dots');
+const navRight = document.getElementById('navRight');
+const navLeft = document.getElementById('navLeft');
 let quantityDotsOnPageMobile = 5;
-const mediaQuery = window.matchMedia('(min-width: 500px)')
+const mediaQuery = window.matchMedia('(min-width: 1280px)')
 let dotsPage = 0;
 navLeft.style.color = "rgba(34,191,149,0.40)";
 navLeft.style.borderColor = "rgba(34,191,149,0.40)";
@@ -95,9 +95,9 @@ navLeft.onclick = () => {
     quantityDotsOnPage();
 }
 //----------slider right-------------
-const dotsClick = document.querySelectorAll('#dotsClick');
-let rightTitle = document.querySelector('#rightTitle');
-let rightText = document.querySelector('#rightText');
+const dotsClick = document.querySelectorAll('.slider-dots');
+let rightTitle = document.getElementById('rightTitle');
+let rightText = document.getElementById('rightText');
 function textRight(){
     for(let i = 0; i < dotsClick.length; i++){
         dotsClick[i].onclick = () => {
@@ -108,10 +108,10 @@ function textRight(){
 }
 textRight();
 //------------faqsQuetion
-const faqsQuetion = document.querySelectorAll('#faqsQuetions');
-const faqsQuetionDown = document.querySelectorAll('#faqsQuetionDown');
-const faqsQuetionUp = document.querySelectorAll('#faqsQuetionUp');
-const faqsAnswer = document.querySelectorAll('#faqsAnswer');
+const faqsQuetion = document.querySelectorAll('.faqs-quetions');
+const faqsQuetionDown = document.querySelectorAll('.faqs-down');
+const faqsQuetionUp = document.querySelectorAll('.faqs-up');
+const faqsAnswer = document.querySelectorAll('.faqs-answer');
 function faqsNavClose() {
     for(let i = 0; i < faqsQuetion.length; i++){
         faqsAnswer[i].style.display = 'none';
@@ -138,7 +138,7 @@ function faqsNav() {
 faqsNav();
 //-----------showFaqsMoreQuestion
 const show = document.querySelectorAll('.show');
-const faqsMoreQuestion = document.querySelector('#faqsMoreQuestion');
+const faqsMoreQuestion = document.getElementById('faqsMoreQuestion');
 let quantity = 0;
 function showFaqsMoreQuestion() {
     faqsMoreQuestion.onclick = () => {
@@ -164,12 +164,10 @@ function showFaqsMoreQuestion() {
 showFaqsMoreQuestion();
 //-----------mobile
 const aroundBody = document.body;
-const headerX = document.querySelector('#headerX');
-const headerMenu = document.querySelector('#headerMenu');
-const headerNav= document.querySelector('#headerNav');
-const headerBtn = document.querySelector('#headerBtn');
-const headerBtnOne = document.querySelector('#headerBtrOne');
-const headerBtnTwo = document.querySelector('#headerBtnTwo');
+const headerX = document.getElementById('headerX');
+const headerMenu = document.getElementById('headerMenu');
+const headerNav= document.getElementById('headerNav');
+const headerBtn = document.getElementById('headerBtn');
 headerX.style.display = 'none';
 function mobileMenu() {
     headerMenu.onclick = () => {

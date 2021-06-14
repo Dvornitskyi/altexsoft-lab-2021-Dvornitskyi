@@ -1,119 +1,122 @@
 .tips {
-    max-width: 375px;
+    min-width: 375px;
     width: 100%;
     height: 100%;
     margin: 0 auto 0;
-&__logo{
+    padding: 0 20px;
+&-logo{
     width: 90px;
     height: 18px;
     margin: 10px auto 24px;
 }
-&__area-logo{
-    max-width: 335px;
+&-area-logo{
+    min-width: 335px;
     width: 100%;
     height: 100%;
     margin: 52px auto 0;
-    border-top: 1.5px solid #B2B2B2;
-    border-bottom: 1.5px solid #22BF95;
+    border-top: 1.5px solid $color-footer-border;
+    border-bottom: 1.5px solid $color-button-hr;
 }
-&__section {
-    max-width: 335px;
+&-section {
+    min-width: 335px;
     width: 100%;
     margin: 0 auto;
     height: 100%;
 }
-&__first {
-    max-width: 335px;
+&-first {
+    min-width: 335px;
     width: 100%;
     height: 54px;
     display: flex;
     align-items: center;
-    border-bottom: 1.5px solid #22BF95;
+    border-bottom: 1.5px solid $color-button-hr;
     margin: 0 auto 0;
 }
-&__first-one-letter {
+&-first-one-letter {
     margin-left: 16px;
     font-size: 40px;
     width: 26px;
-    color: #E5E5E5;
+    color: $color-plans-no-active;
     font-family: 'Actor', sans-serif;
 }
-&__first-text {
+&-first-text {
     margin-left: 34px;
-    font-size: 16px;
-    width: 228px;
+    font-size: $font-size-up-standart-text;
+    min-width: 228px;
+    width: 100%;
 }
-&__area-icon-plus {
+&-area-icon-plus {
     margin-left: 0px;
     width: 14px;
     height: 14px;
-    border: 1px solid #22BF95;
+    border: 1px solid $color-button-hr;
     border-radius: 100%;
     cursor: pointer;
 }
-&__icon-plus {
+&-icon-plus {
     width: 14px;
     height: 14px;
-    color: #22BF95;
+    color: $color-button-hr;
     margin-top: -1px;
     margin-left: 2px;
 }
-&__second {
-    max-width: 335px;
+&-second {
+    min-width: 335px;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    border-bottom: 1.5px solid #22BF95;
+    border-bottom: 1.5px solid $color-button-hr;
     margin: 0 auto 0;
     position: relative;
     display: none;
 }
-&__second-left {
-    width: 335px;
+&-second-left {
+    min-width: 335px;
+    width: 100%;
 }
-&__second-left-title {
+&-second-left-title {
     margin-top: 24px;
-    font-size: 24px;
+    font-size: $font-size-small-midlle-text;
 }
-&__second-left-icon {
+&-second-left-icon {
     font-size: 117px;
     padding: 21px;
-    color: #E5E5E5;
+    color: $color-plans-no-active;
     margin: 21px 90px;
 }
-&__area-icon-minus {
+&-area-icon-minus {
     width: 14px;
     height: 14px;
-    border: 1px solid #22BF95;
+    border: 1px solid $color-button-hr;
     border-radius: 100%;
     cursor: pointer;
     position: absolute;
-    top: 30px;
-    right: 18px;
+    top: 20px;
+    right: 0px;
 }
-&__icon-minus {
+&-icon-minus {
     width: 14px;
     height: 14px;
-    color: #22BF95;
+    color: $color-button-hr;
     margin-top: -1px;
     margin-left: 2px;
 }
-&__second-right-first-text {
+&-second-right-first-text {
     font-size: 14px;
-    max-width: 335px;
+    min-width: 335px;
     width: 100%;
     line-height: 24px;
 }
-&__second-right-second-text {
+&-second-right-second-text {
     margin-top: 20px;
     font-size: 14px;
-    max-width: 335px;
+    min-width: 335px;
     width: 100%;
     line-height: 24px; 
 }
-&__second-right-i-area {
-    max-width: 335px;
+&-second-right-i-area {
+    min-width: 335px;
     width: 100%;
     height: 100%;
     margin-top: 14px;
@@ -122,144 +125,145 @@
     align-items: center;
     justify-content: space-between;
 }
-&__second-right-i {
+&-second-right-i {
     width: 30px;
     height: 30px;
  }
-&__second-right-i-text {
-    color: #7F7F7F;
-    font-size: 12px;
+&-second-right-i-text {
+    color: $color-up-gradient;
+    font-size: $font-size-button-and-standart-text;
     width: 227px;
+    width: 100%;
 }
 }
-@media (min-width: 500px){
+@media (min-width: $screen-desktop-large){
     .tips {
         max-width: 1440px;
         width: 100%;
         height: 1065px;
         height: 100%;
         margin: 0 auto 0;
-    &__logo{
+    &-logo{
         width: 342px;
         height: 41px;
         margin: 0 auto 0;
     }
-    &__area-logo{
+    &-area-logo{
         max-width: 1171px;
         width: 100%;
         height: 162px;
         margin: 137px auto 50px;
-        border-top: 1.5px solid #B2B2B2;
-        border-bottom: 1.5px solid #22BF95;
+        border-top: 1.5px solid $color-footer-border;
+        border-bottom: 1.5px solid $color-button-hr;
     }
-    &__logo-link{
+    &-logo-link{
         margin-top: 20px;
         width: 342px;
         height: 41px;
     }
-    &__section {
+    &-section {
         max-width: 1171px;
         width: 100%;
         margin: 0 auto;
         height: 100%;
     }
-    &__first {
+    &-first {
         max-width: 1171px;
         width: 100%;
         height: 150px;
         display: flex;
         align-items: center;
-        border-bottom: 1.5px solid #22BF95;
+        border-bottom: 1.5px solid $color-button-hr;
         margin: 0 auto 0;
     }
-    &__first-one-letter {
+    &-first-one-letter {
         margin-left: 49px;
         font-size: 110px;
         width: 37px;
-        color: #E5E5E5;
+        color: $color-plans-no-active;
     }
-    &__first-text {
+    &-first-text {
         margin-left: 113px;
-        font-size: 24px;
+        font-size: $font-size-small-midlle-text;
         width: 292px;
     }
-    &__area-icon-plus {
+    &-area-icon-plus {
         margin-left: 590px;
         width: 35px;
         height: 35px;
-        border: 1px solid #22BF95;
+        border: 1px solid $color-button-hr;
         border-radius: 100%;
         cursor: pointer;
     }
-    &__icon-plus {
+    &-icon-plus {
         width: 18px;
         height: 18px;
-        color: #22BF95;
+        color: $color-button-hr;
         margin-top: 8px;
         margin-left: 12px;
         font-size: 18px;
     }
-    &__second {
+    &-second {
         max-width: 1171px;
         width: 100%;
         height: 612px;
         display: flex;
         flex-direction: row;
-        border-bottom: 1.5px solid #22BF95;
+        border-bottom: 1.5px solid $color-button-hr;
         margin: 0 auto 0;
         display: none;
     }
-    &__second-left {
+    &-second-left {
         width: 370px;
     }
-    &__second-left-title {
+    &-second-left-title {
         margin-top: 50px;
         font-size: 42px;
     }
-    &__second-left-icon {
+    &-second-left-icon {
         margin-top: 42px;
         font-size: 170px;
         padding: 50px;
-        color: #E5E5E5;
+        color: $color-plans-no-active;
         margin: 50px 50px;
     }
-    &__second-right {
+    &-second-right {
         max-width: 602px;
         width: 100%;
         margin-left: 136px;
     }
-    &__area-icon-minus {
+    &-area-icon-minus {
         width: 35px;
         height: 35px;
         margin-left: 574px;
-        border: 1px solid #22BF95;
+        border: 1px solid $color-button-hr;
         border-radius: 100%;
         margin-top: 57px;
         cursor: pointer;
         position: inherit;
     }
-    &__icon-minus {
+    &-icon-minus {
         width: 35px;
         height: 35px;
-        color: #22BF95;
+        color: $color-button-hr;
         margin-top: 8px;
         margin-left: 13px;
         font-size: 20px;
     }
-    &__second-right-first-text {
-        font-size: 16px;
+    &-second-right-first-text {
+        font-size: $font-size-up-standart-text;
         max-width: 336px;
         width: 100%;
         line-height: 24px;
     }
-    &__second-right-second-text {
+    &-second-right-second-text {
         margin-top: 40px;
         font-size: 16px;
         max-width: 336px;
         width: 100%;
         line-height: 24px; 
     }
-    &__second-right-i-area {
+    &-second-right-i-area {
         max-width: 450px;
         width: 100%;
         height: 30px;
@@ -267,16 +271,16 @@
         display: flex;
         align-items: center;
     }
-    &__second-right-i {
+    &-second-right-i {
         width: 30px;
         height: 30px;
     }
-    &__second-right-i-text {
-        color: #7F7F7F;
+    &-second-right-i-text {
+        color: $color-up-gradient;
         margin-left: 20px;
         width: 100%;
     }
-    &__second{
+    &-second{
         display: none;
     }
     } 
