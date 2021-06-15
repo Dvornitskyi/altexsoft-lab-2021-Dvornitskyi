@@ -40,6 +40,18 @@ input:active,
   outline-offset: 0;
 }
 
-.show{
+.not-show{
   display: none;
+}
+
+.all-page-logo{
+  width: 110px;
+  height: 18px;
+  margin: 10px auto 24px;
+}
+@media (min-width: $screen-desktop-large){
+  .all-page-logo{
+    width: 272px;
+    height: 32px;
+  }
 }

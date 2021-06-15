@@ -1,6 +1,4 @@
 //////---------tips
-const tipsPlus = document.querySelectorAll('.tips-area-icon-plus');
-const tipsMinus = document.querySelectorAll('.tips-area-icon-minus');
 const tipsFirst = document.querySelectorAll('.tips-first');
 const tipsSecond = document.querySelectorAll('.tips-second');
 function tipsAkardionClose() {
@@ -11,12 +9,12 @@ function tipsAkardionClose() {
 }
 function tipsAkardion() {
     for(let i = 0; i < tipsFirst.length; i++){
-        tipsPlus[i].onclick = () => {   
+        tipsFirst[i].onclick = () => {   
             tipsAkardionClose();
             tipsFirst[i].style.display = 'none';
             tipsSecond[i].style.display = 'flex';    
         }
-        tipsMinus[i].onclick = () => {
+        tipsSecond[i].onclick = () => {
             tipsAkardionClose();
             tipsSecond[i].style.display = 'none';
             tipsFirst[i].style.display = 'flex';
@@ -56,8 +54,7 @@ navRight.onclick = () => {
             navRight.style.color = "rgba(34,191,149,0.40)";
             navRight.style.borderColor = "rgba(34,191,149,0.40)";
         }
-        if(dotsPage == (Math.ceil((dots.length / quantityDotsOnPageMobile)))){
-            
+        if(dotsPage == (Math.ceil((dots.length / quantityDotsOnPageMobile)))){        
             dotsPage = (Math.ceil(dots.length / quantityDotsOnPageMobile)-1);
             navRight.style.color = "rgba(34,191,149,0.40)";
             navRight.style.borderColor = "rgba(34,191,149,0.40)";
@@ -108,55 +105,57 @@ function textRight(){
 }
 textRight();
 //------------faqsQuetion
-const faqsQuetion = document.querySelectorAll('.faqs-quetions');
+const accordionElement = document.querySelectorAll('.accordion-element');
 const faqsQuetionDown = document.querySelectorAll('.faqs-down');
 const faqsQuetionUp = document.querySelectorAll('.faqs-up');
 const faqsAnswer = document.querySelectorAll('.faqs-answer');
+let accordionQuantityClick = 0;
 function faqsNavClose() {
-    for(let i = 0; i < faqsQuetion.length; i++){
+    for(let i = 0; i < accordionElement.length; i++){
         faqsAnswer[i].style.display = 'none';
         faqsQuetionDown[i].style.display = 'flex';
         faqsQuetionUp[i].style.display = 'none';
     }
 }
 function faqsNav() {
-    for(let i = 0; i < faqsQuetion.length; i++){
-        faqsQuetionDown[i].onclick = () => {
-            faqsNavClose();
-            faqsAnswer[i].style.display = 'flex';
-            faqsQuetionDown[i].style.display = 'none';
-            faqsQuetionUp[i].style.display = 'flex';
-        }
-        faqsQuetionUp[i].onclick = () => {
-            faqsNavClose();
-            faqsAnswer[i].style.display = 'none';
-            faqsQuetionDown[i].style.display = 'flex';
-            faqsQuetionUp[i].style.display = 'none';
+    for(let i = 0; i < accordionElement.length; i++){
+        if(accordionQuantityClick == 0){
+            accordionElement[i].onclick = () => {
+                faqsNavClose();
+                faqsAnswer[i].style.display = 'flex';
+                faqsQuetionDown[i].style.display = 'none';
+                faqsQuetionUp[i].style.display = 'flex';
+                accordionQuantityClick++;
+                }
+            }else if(accordionQuantityClick != 0){
+                accordionQuantityClick = 1;
+                accordionElement[i].onclick = () => {
+                    faqsNavClose();
+                    faqsAnswer[i].style.display = 'none';
+                    faqsQuetionDown[i].style.display = 'flex';
+                    faqsQuetionUp[i].style.display = 'none';
+                }
+            }
         }
     }
-}
 faqsNav();
 //-----------showFaqsMoreQuestion
-const show = document.querySelectorAll('.show');
+const show = document.querySelectorAll('.not-show');
 const faqsMoreQuestion = document.getElementById('faqsMoreQuestion');
 let quantity = 0;
 function showFaqsMoreQuestion() {
     faqsMoreQuestion.onclick = () => {
-        if(quantity < 1)
-        {
+        if(quantity == 0)        {
         quantity++;
         for(let i = 0; i < show.length; i++)
             {
-            show[i].style.display = 'flex';
-            console.log(i);
+            show[i].style.display = 'block';
             } 
-        }
-        else{
+        }else if(quantity != 0){
             quantity = 0;
             for(let j = 0; j < show.length; j++)
             {
             show[j].style.display = 'none';
-            console.log((j+10));
             }
         }
     }

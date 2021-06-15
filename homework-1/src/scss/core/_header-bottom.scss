@@ -1,0 +1,40 @@
+.header-bottom{
+    margin-top: -62px;
+    height: 210px;
+    background: rgb(67,249,34);
+    background: linear-gradient(270deg, rgba(67,249,34,1) 18%, rgba(90,209,206,1) 30%);
+    &-page-title {
+      padding-top: 130px;
+      margin: 0 auto;
+      max-width: 142px;
+      width: 100%;
+      height: 112px;
+      font-size: 40px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $color-up-gradient;
+      letter-spacing: 2px;
+    }
+  }
+
+  @media (min-width: $screen-desktop-large){
+    .header-bottom{
+      width: 100%;
+      height: 500px;
+      margin-top: -84px;
+      &-page-title {
+        padding-top: 186px;
+        max-width: 1110px;
+        width: 100%;
+        height: 130px;
+        font-size: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-up-gradient;
+        letter-spacing: 2px;
+      }
+    }
+  }
