@@ -1,27 +1,3 @@
-//-----------mobile
-const aroundBody = document.body;
-const headerX = document.getElementById('headerX');
-const headerMenu = document.getElementById('headerMenu');
-const headerNav= document.getElementById('headerNav');
-const headerBtn = document.getElementById('headerBtn');
-headerX.style.display = 'none';
-function mobileMenu() {
-    headerMenu.onclick = () => {
-        headerNav.style.display = 'block';
-        headerBtn.style.display = 'flex';
-        headerX.style.display = 'block';
-        headerMenu.style.display = 'none';
-        aroundBody.style.overflow = 'hidden';
-    }
-    headerX.onclick = () => {
-        headerNav.style.display = 'none';
-        headerBtn.style.display = 'none';
-        headerX.style.display = 'none';
-        headerMenu.style.display = 'block';
-        aroundBody.style.overflow = 'visible';
-    }
-}
-mobileMenu();
 //---sliders
 $(document).ready(function(){
     $('.plans-slider').slick({
@@ -39,6 +15,7 @@ $(document).ready(function(){
             {
                 breakpoint: 1024,
                 setting: {
+                    infinite: true,
                     slidesToShow: 4,
                     slidesToScroll: 1,
                 }
@@ -70,3 +47,27 @@ $(document).ready(function(){
         allowTouchMove: false,
     });
 });
+//-----------mobile
+const aroundBody = document.body;
+const headerX = document.getElementById('headerX');
+const headerMenu = document.getElementById('headerMenu');
+const headerNav= document.getElementById('headerNav');
+const headerBtn = document.getElementById('headerBtn');
+headerX.style.display = 'none';
+function mobileMenu() {
+    headerMenu.onclick = () => {
+        headerNav.style.display = 'block';
+        headerBtn.style.display = 'flex';
+        headerX.style.display = 'block';
+        headerMenu.style.display = 'none';
+        aroundBody.style.overflow = 'hidden';
+    }
+    headerX.onclick = () => {
+        headerNav.style.display = 'none';
+        headerBtn.style.display = 'none';
+        headerX.style.display = 'none';
+        headerMenu.style.display = 'block';
+        aroundBody.style.overflow = 'visible';
+    }
+}
+mobileMenu();
